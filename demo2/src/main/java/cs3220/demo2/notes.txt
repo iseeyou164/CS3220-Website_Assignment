@@ -1,0 +1,38 @@
+4/16
+we might need 2 repositories for the homework.
+TestRepository.save(entry);
+model.addAttribute("entry", TestRepository.findById(id).orElse(null));
+Optional: Value that could be null
+use auto increment in sql.
+
+make sure to review the annotations from the slides!
+
+use @Transient to exclude specific data from structure.
+
+...pretend this is in TestModel
+@ElementCollection
+private List<String> testArray
+splits this part into a different table.
+other annotations for this: @OrderBy("asc") or @OrderColumn
+
+relationships between classes!
+let's say E1 and E2 are different classes
+HAS TO FIT BOTH CRITERIA
+@ManyToOne
+One object in E1 is related to more than one object in E2 (Many)
+One object in E2 is related to 1 object in E1 (One)
+@OneToMany
+One object in E1 is related to 1 object in E2 (One)
+One object in E2 is related to more than one object in E1 (Many)
+@ManyToMany
+One object in E1 is related to more than one object in E2 (Many)
+One object in E2 is related to more than one object in E1 (Many)
+@OneToOne
+One object in E1 is related to 1 object in E2 (One)
+One object in E2 is related to 1 object in E1 (One)
+
+*took a pic of the application of this!
+
+4/17
+select e from employee where firstName = 'John'
+select object from class object where property = ''
